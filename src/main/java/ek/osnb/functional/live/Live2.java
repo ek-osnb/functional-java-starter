@@ -60,7 +60,9 @@ public class Live2 {
         System.out.println(priceTag.apply(PRICE));
 
 
-//        Function<Double,Function<Double,Double>> myPercentDiscount = (Double percent1) -> (Double price) -> price *  (1 - percent1 / 100.0);
+        Function<Double,Function<Double,Double>> myPercentDiscount = (Double percent1) -> (Double price) -> price *  (1 - percent1 / 100.0);
+        Function<Double, Double> studentDiscountWithHigherOrderFunction = myPercentDiscount.apply(10.0);
+        System.out.println(studentDiscountWithHigherOrderFunction.apply(PRICE));
 
         // Predicate<T>
         //           ^
